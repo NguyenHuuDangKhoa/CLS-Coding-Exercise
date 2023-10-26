@@ -7,7 +7,15 @@ import structlog
 logger = structlog.getLogger(__name__)
 
 
-def _check_memory_usage(path: Path, chunksize: int = 10000):
+def _check_memory_usage(path: Path, chunksize: int = 10000) -> None:
+    """
+    This function provides information regarding how much memory usage
+    during reading datset so we can choose the appropriate chunksize
+    for reading in batches.
+    param path: Path to the location of the dataset
+    param chunksize: size of each chunk to read dataset in batches
+    return: None
+    """
     chunks = pd.read_csv(path, chunksize=chunksize)
     # List to keep track of memory usages of each chunk
     memory_usages = []
@@ -24,7 +32,15 @@ def _check_memory_usage(path: Path, chunksize: int = 10000):
     logger.info(f"\nAverage Memory Usage per Chunk: {avg_mem_usage:.2f} MB")
 
 
-def read_data(path: Path, chunksize: int = None, logging: bool = False):
+def read_data(path: Path, chunksize: int = None, logging: bool = False) -> pd.DataFrame:
+    """
+    This function use parameters in the configuration file (config.yml in root folder)
+    to read selected dataset and convert them to a Pandas dataframe.
+    param path: path to the location of the dataset
+    param chunksize: size of each chunk to read dataset in batches
+    param logging: whether to see the memory usage for each chunk as well as average memory usage
+    return: a Pandas dataframe
+    """
     if path.split('.')[-1] == "h5":
         data = {}
         with h5py.File(path, 'r') as file:
