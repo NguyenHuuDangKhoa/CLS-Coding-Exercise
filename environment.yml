@@ -30,3 +30,7 @@ dependencies:
       - flake8
       - Sphinx
       - tox
+      - seaborn
+      - plotly
+      - h5py
+      - scipy
