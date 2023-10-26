@@ -1,0 +1,8 @@
+data:
+    path: data\raw\question1_data.csv
+    chunksize: 500000
+    logging: True
+question: 1
+mutual_information:
+    function: mutual_information_binary
+    
