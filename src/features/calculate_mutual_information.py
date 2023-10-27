@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from typing import Dict, Callable
 from scipy.stats import entropy
+from sklearn.feature_selection import mutual_info_regression
 
 
 def mutual_information_binary(X: pd.Series, Y: pd.Series) -> np.float64:
@@ -97,3 +98,6 @@ def compute_mi(data: pd.DataFrame, mi_func: Callable) -> Dict:
         print(f"Mutual Information between {var[0]} and {var[1]}: {mi_value}")
 
     return results
+
+def compute_MI(x, y, discrete_features='auto'):
+    return mutual_info_regression(x.values.reshape(-1, 1), y, discrete_features=discrete_features)[0]
