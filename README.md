@@ -134,7 +134,7 @@ current_question: question_2
 
 1. After excuting the pipeline, all generated figures would be saved in <strong><em>[reports/figures](reports/figures)</em></strong>.
 
-2. The details analysis and summary of results of question 1 is stored in [Exploratory_Data_Analysis_Report.docx](reports/figures/Exploratory_Data_Analysis_Report.docx).
+2. The details analysis and summary of results of question 1 is stored in [Exploratory_Data_Analysis_Report.docx](reports/Exploratory_Data_Analysis_Report.docx).
 
 3. The results of question 2 will be displayed directly on the terminal when being executed.
 
