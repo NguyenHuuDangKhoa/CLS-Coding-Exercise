@@ -2,6 +2,7 @@ question_1:
     data_path: data\raw\question1_data.csv
     chunksize: 500000
     loggine: True
+    report_path: reports\figures
 
 question_2:
     data_path: data\raw\question2-data.h5
