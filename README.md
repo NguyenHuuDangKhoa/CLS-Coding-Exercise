@@ -107,7 +107,7 @@ make run-pipeline
 
 ### 1. Data
 
-Due to confidentiality and size concerns, data is typically not pushed to GitHub. Before executing the pipeline or notebooks, ensure you place the datasets in the <strong>/data/raw</strong> directories.
+Due to confidentiality and size concerns, data is typically not pushed to GitHub. Before executing the pipeline or notebooks, ensure you place the datasets in the <strong><em>/data/raw</em></strong> directories.
 
 ### 2. Main Pipeline
 
@@ -129,3 +129,13 @@ question_2:
 
 current_question: question_2
 ```
+
+## Reports
+
+1. After excuting the pipeline, all generated figures would be saved in <strong><em>[reports/figures](reports/figures)</em></strong>.
+
+2. The details analysis and summary of results of question 1 is stored in [Exploratory_Data_Analysis_Report.docx](reports/figures/Exploratory_Data_Analysis_Report.docx).
+
+3. The results of question 2 will be displayed directly on the terminal when being executed.
+
+4. All of the initial analysis and codes can be found within [notebooks](notebooks)
