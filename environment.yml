@@ -34,3 +34,4 @@ dependencies:
       - plotly
       - h5py
       - scipy
+      - hdbscan

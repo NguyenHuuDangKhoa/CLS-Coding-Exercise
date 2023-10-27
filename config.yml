@@ -1,8 +1,12 @@
-data:
-    path: data\raw\question1_data.csv
+question_1:
+    data_path: data\raw\question1_data.csv
     chunksize: 500000
-    logging: True
-question: 1
-mutual_information:
-    function: mutual_information_binary
-    
+    loggine: True
+
+question_2:
+    data_path: data\raw\question2-data.h5
+    mutual_information_function: mutual_information_binary
+    # List of available functions for calculating discrete mutual information:
+    # [mutual_information_binary, mutual_information_multiple_discrete, mutual_info_with_entropy, mutual_info_score, mutual_info_classif]
+
+current_question: question_1
